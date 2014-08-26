@@ -8,6 +8,7 @@
 
 #import "YILoginViewController.h"
 #import <Parse/Parse.h>
+#import "YIConstants.h"
 
 @interface YILoginViewController ()
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
@@ -80,25 +81,25 @@
             NSDictionary *userDictionary = (NSDictionary *)result;
             NSMutableDictionary *userProfile = [[NSMutableDictionary alloc] initWithCapacity:8];
             if (userDictionary[@"name"]) {
-                userProfile[@"name"] = userDictionary[@"name"];
+                userProfile[kYIUserProfileNameKey] = userDictionary[@"name"];
             }
             if (userDictionary[@"first_name"]) {
-                userProfile[@"first_name"] = userDictionary[@"first_name"];
+                userProfile[kYIUserProfileFirstNameKey] = userDictionary[@"first_name"];
             }
             if (userDictionary[@"location"][@"name"]) {
-                userProfile[@"location"] = userDictionary[@"location"][@"name"];
+                userProfile[kYIUserProfileLocationKey] = userDictionary[@"location"][@"name"];
             }
             if (userDictionary[@"gender"]) {
-                userProfile[@"gender"] = userDictionary[@"gender"];
+                userProfile[kYIUserProfileGenderKey] = userDictionary[@"gender"];
             }
             if (userDictionary[@"birthday"]) {
-                userProfile[@"birthday"] = userDictionary[@"birthday"];
+                userProfile[kYIUserProfileBirthdayKey] = userDictionary[@"birthday"];
             }
             if (userDictionary[@"interested_in"]) {
-                userProfile[@"interested_in"] = userDictionary[@"interested_in"];
+                userProfile[kYIUserProfileInterestedInKey] = userDictionary[@"interested_in"];
             }
             
-            [[PFUser currentUser] setObject:userProfile forKey:@"profile"];
+            [[PFUser currentUser] setObject:userProfile forKey:kYIUserProfileKey];
             [[PFUser currentUser] saveInBackground];
         } else {
             NSLog(@"Error in FB request:%@", error);
