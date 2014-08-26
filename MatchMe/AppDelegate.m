@@ -21,9 +21,6 @@
                   clientKey:@"QGFLiMRRDEBuRG24L84nm5M9iDkaMm3qgnApGXjh"];
     [PFFacebookUtils initializeFacebook];
     
-    
-    
-    
     return YES;
 }
 
