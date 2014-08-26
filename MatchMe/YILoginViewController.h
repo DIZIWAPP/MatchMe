@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface YILoginViewController : UIViewController
+@interface YILoginViewController : UIViewController <NSURLConnectionDataDelegate>
 
 @end
