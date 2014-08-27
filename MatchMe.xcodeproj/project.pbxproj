@@ -15,6 +15,7 @@
 		35BBD3FF19ABF45D001D28CB /* YILoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35BBD3FE19ABF45D001D28CB /* YILoginViewController.m */; };
 		35BBD40319AC38C5001D28CB /* YIConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 35BBD40219AC38C5001D28CB /* YIConstants.m */; };
 		35BBD40719AD7589001D28CB /* YIHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35BBD40619AD7589001D28CB /* YIHomeViewController.m */; };
+		35BBD40C19AD7CD6001D28CB /* YISettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35BBD40B19AD7CD6001D28CB /* YISettingsViewController.m */; };
 		BD7B60721CAF425AB721F3E6 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 017EBBDD41B0434EB8F23933 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +47,8 @@
 		35BBD40219AC38C5001D28CB /* YIConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YIConstants.m; sourceTree = "<group>"; };
 		35BBD40519AD7589001D28CB /* YIHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YIHomeViewController.h; sourceTree = "<group>"; };
 		35BBD40619AD7589001D28CB /* YIHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YIHomeViewController.m; sourceTree = "<group>"; };
+		35BBD40A19AD7CD6001D28CB /* YISettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YISettingsViewController.h; sourceTree = "<group>"; };
+		35BBD40B19AD7CD6001D28CB /* YISettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YISettingsViewController.m; sourceTree = "<group>"; };
 		8667B984B39C4828957146BD /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -94,6 +97,7 @@
 				35BBD3E419ABEFE7001D28CB /* Main.storyboard */,
 				35BBD40019ABF4D5001D28CB /* Login */,
 				35BBD40419AD7548001D28CB /* Home */,
+				35BBD40919AD7CC2001D28CB /* Settings */,
 				35BBD3DB19ABEFE7001D28CB /* AppDelegate.h */,
 				35BBD3DC19ABEFE7001D28CB /* AppDelegate.m */,
 				35BBD3E719ABEFE7001D28CB /* Images.xcassets */,
@@ -146,6 +150,15 @@
 				35BBD40619AD7589001D28CB /* YIHomeViewController.m */,
 			);
 			name = Home;
+			sourceTree = "<group>";
+		};
+		35BBD40919AD7CC2001D28CB /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				35BBD40A19AD7CD6001D28CB /* YISettingsViewController.h */,
+				35BBD40B19AD7CD6001D28CB /* YISettingsViewController.m */,
+			);
+			name = Settings;
 			sourceTree = "<group>";
 		};
 		865BC397750D4355B8E5B386 /* Frameworks */ = {
@@ -293,6 +306,7 @@
 				35BBD40319AC38C5001D28CB /* YIConstants.m in Sources */,
 				35BBD3DD19ABEFE7001D28CB /* AppDelegate.m in Sources */,
 				35BBD3DA19ABEFE7001D28CB /* main.m in Sources */,
+				35BBD40C19AD7CD6001D28CB /* YISettingsViewController.m in Sources */,
 				35BBD40719AD7589001D28CB /* YIHomeViewController.m in Sources */,
 				35BBD3FF19ABF45D001D28CB /* YILoginViewController.m in Sources */,
 			);
