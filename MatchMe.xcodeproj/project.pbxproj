@@ -17,6 +17,7 @@
 		35BBD40719AD7589001D28CB /* YIHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35BBD40619AD7589001D28CB /* YIHomeViewController.m */; };
 		35BBD40C19AD7CD6001D28CB /* YISettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35BBD40B19AD7CD6001D28CB /* YISettingsViewController.m */; };
 		35BBD41019AD89F7001D28CB /* YIEditProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35BBD40F19AD89F7001D28CB /* YIEditProfileViewController.m */; };
+		35BBD41419AD8D3B001D28CB /* YIProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35BBD41319AD8D3B001D28CB /* YIProfileViewController.m */; };
 		BD7B60721CAF425AB721F3E6 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 017EBBDD41B0434EB8F23933 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +53,8 @@
 		35BBD40B19AD7CD6001D28CB /* YISettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YISettingsViewController.m; sourceTree = "<group>"; };
 		35BBD40E19AD89F7001D28CB /* YIEditProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YIEditProfileViewController.h; sourceTree = "<group>"; };
 		35BBD40F19AD89F7001D28CB /* YIEditProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YIEditProfileViewController.m; sourceTree = "<group>"; };
+		35BBD41219AD8D3B001D28CB /* YIProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YIProfileViewController.h; sourceTree = "<group>"; };
+		35BBD41319AD8D3B001D28CB /* YIProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YIProfileViewController.m; sourceTree = "<group>"; };
 		8667B984B39C4828957146BD /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -102,6 +105,7 @@
 				35BBD40419AD7548001D28CB /* Home */,
 				35BBD40919AD7CC2001D28CB /* Settings */,
 				35BBD40D19AD89C4001D28CB /* Edit Profile */,
+				35BBD41119AD8D1D001D28CB /* Profile */,
 				35BBD3DB19ABEFE7001D28CB /* AppDelegate.h */,
 				35BBD3DC19ABEFE7001D28CB /* AppDelegate.m */,
 				35BBD3E719ABEFE7001D28CB /* Images.xcassets */,
@@ -172,6 +176,15 @@
 				35BBD40F19AD89F7001D28CB /* YIEditProfileViewController.m */,
 			);
 			name = "Edit Profile";
+			sourceTree = "<group>";
+		};
+		35BBD41119AD8D1D001D28CB /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				35BBD41219AD8D3B001D28CB /* YIProfileViewController.h */,
+				35BBD41319AD8D3B001D28CB /* YIProfileViewController.m */,
+			);
+			name = Profile;
 			sourceTree = "<group>";
 		};
 		865BC397750D4355B8E5B386 /* Frameworks */ = {
@@ -322,6 +335,7 @@
 				35BBD3DA19ABEFE7001D28CB /* main.m in Sources */,
 				35BBD40C19AD7CD6001D28CB /* YISettingsViewController.m in Sources */,
 				35BBD40719AD7589001D28CB /* YIHomeViewController.m in Sources */,
+				35BBD41419AD8D3B001D28CB /* YIProfileViewController.m in Sources */,
 				35BBD3FF19ABF45D001D28CB /* YILoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

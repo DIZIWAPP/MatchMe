@@ -26,7 +26,7 @@
 - (void)viewDidAppear:(BOOL)animated {
     if ([PFUser currentUser] && [PFFacebookUtils isLinkedWithUser:[PFUser currentUser]]) {
         [self updateUserInformation];
-        [self performSegueWithIdentifier:@"loginToTabBarSeguey" sender:self];
+        [self performSegueWithIdentifier:@"loginToHomeSegue" sender:self];
     }
 }
 
@@ -71,7 +71,7 @@
             }
         } else {
             [self updateUserInformation];
-            [self performSegueWithIdentifier:@"loginToTabBarSeguey" sender:self];
+            [self performSegueWithIdentifier:@"loginToHomeSegue" sender:self];
         }
     }];
     
@@ -106,9 +106,19 @@
             }
             if (userDictionary[@"birthday"]) {
                 userProfile[kYIUserProfileBirthdayKey] = userDictionary[@"birthday"];
+                NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+                [formatter setDateStyle:NSDateFormatterShortStyle];
+                NSDate *date = [formatter dateFromString:userDictionary[@"birthday"]];
+                NSDate *now = [NSDate date];
+                NSTimeInterval seconds = [now timeIntervalSinceDate:date];
+                int age = seconds / 31536000;
+                userProfile[kYIUserProfileAgeKey] = @(age);  //converts age into NSNumber
             }
             if (userDictionary[@"interested_in"]) {
                 userProfile[kYIUserProfileInterestedInKey] = userDictionary[@"interested_in"];
+            }
+            if (userDictionary[@"relationship_status"]){
+                userProfile[kYIUserProfileRelationshipStatusKey] = userDictionary[@"relationship_status"];
             }
             if ([pictureURL absoluteString]) {
                 userProfile[kYIUserProfilePictureURL] = [pictureURL absoluteString];

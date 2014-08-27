@@ -19,6 +19,8 @@ extern NSString *const kYIUserProfileGenderKey;
 extern NSString *const kYIUserProfileBirthdayKey;
 extern NSString *const kYIUserProfileInterestedInKey;
 extern NSString *const kYIUserProfilePictureURL;
+extern NSString *const kYIUserProfileRelationshipStatusKey;
+extern NSString *const kYIUserProfileAgeKey;
 
 #pragma mark - Photo Class
 extern NSString *const kYIPhotoClassKey;
