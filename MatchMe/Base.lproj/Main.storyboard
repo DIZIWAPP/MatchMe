@@ -333,6 +333,7 @@
                                 </variation>
                                 <connections>
                                     <action selector="editProfileButtonPressed:" destination="5f6-i1-Kfk" eventType="touchUpInside" id="TvQ-bE-0rg"/>
+                                    <segue destination="ap9-G7-6Fo" kind="show" id="0Ew-hh-cpR"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -384,6 +385,76 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ojk-fo-c3c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1452" y="-465"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="gQW-a6-0Gk">
+            <objects>
+                <viewController id="ap9-G7-6Fo" customClass="YIEditProfileViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WjI-ch-rPZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="1xS-Xm-CNb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="KCO-Rh-PNj">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dKq-JM-LaD">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" red="0.81039005474452552" green="0.79037408759124084" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="160" y="136" width="280" height="106"/>
+                                </variation>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Why are you awesome?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h9q-yV-H6l">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="160" y="84" width="230" height="21"/>
+                                </variation>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0Oe-4y-Czj">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="160" y="336" width="280" height="280"/>
+                                </variation>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="dKq-JM-LaD"/>
+                                <exclude reference="h9q-yV-H6l"/>
+                                <exclude reference="0Oe-4y-Czj"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular">
+                            <mask key="subviews">
+                                <include reference="dKq-JM-LaD"/>
+                                <include reference="h9q-yV-H6l"/>
+                                <include reference="0Oe-4y-Czj"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="ddX-o9-eIK">
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="F8K-3q-hU9">
+                            <connections>
+                                <action selector="saveBarButtonItemPressed:" destination="ap9-G7-6Fo" id="9eU-YP-2eQ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="profilePictureImageView" destination="0Oe-4y-Czj" id="2n7-ps-iG7"/>
+                        <outlet property="saveBarButtonItem" destination="F8K-3q-hU9" id="zoT-NR-iTf"/>
+                        <outlet property="taglineTextView" destination="dKq-JM-LaD" id="wjH-VY-gj0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LUz-ZC-BcB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2117" y="-465"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gdg-xY-B66">
