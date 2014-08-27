@@ -72,29 +72,145 @@
                     <navigationItem key="navigationItem" id="sXy-F3-m8B"/>
                     <connections>
                         <outlet property="activityIndicator" destination="UOc-fY-BCZ" id="Phn-5I-1r5"/>
-                        <segue destination="Ldr-UF-E7Q" kind="show" identifier="loginToHomeSeguey" id="U6l-gi-ziW"/>
+                        <segue destination="rhc-2c-EBV" kind="show" identifier="loginToHomeSeguey" id="XPo-sD-4M7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R6X-qc-ed9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-86" y="8"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="Lmo-uX-kiP">
+        <!--Title-->
+        <scene sceneID="ZQ5-5D-9UF">
             <objects>
-                <viewController id="Ldr-UF-E7Q" sceneMemberID="viewController">
+                <viewController id="rhc-2c-EBV" customClass="YIHomeViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="rXZ-5y-v0O"/>
-                        <viewControllerLayoutGuide type="bottom" id="sFn-eJ-fgP"/>
+                        <viewControllerLayoutGuide type="top" id="gId-fm-kNQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="Obf-QI-res"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="cvM-Sg-c2Q">
+                    <view key="view" contentMode="scaleToFill" id="kDD-Ni-bKs">
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dub-q1-xxq">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="160" y="98" width="280" height="280"/>
+                                </variation>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DcU-kD-x1N">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Like">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="750" width="46" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="likeButtonPressed:" destination="rhc-2c-EBV" eventType="touchUpInside" id="Laa-z2-QPF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KyP-GD-1nx">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="info">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="277" y="750" width="46" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="infoButtonPressed:" destination="rhc-2c-EBV" eventType="touchUpInside" id="tbZ-f6-goN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m3w-9k-Cz1">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Dislike">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="538" y="750" width="46" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="dislikeButtonPressed:" destination="rhc-2c-EBV" eventType="touchUpInside" id="GTO-g3-Jbd"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="firstName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WYi-ya-ZpF">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="446" width="424" height="21"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="age" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LpL-yP-HUT">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="524" y="446" width="60" height="21"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="tagLine" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A9v-gu-btP">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="475" width="568" height="165"/>
+                                </variation>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="dub-q1-xxq"/>
+                                <exclude reference="DcU-kD-x1N"/>
+                                <exclude reference="KyP-GD-1nx"/>
+                                <exclude reference="m3w-9k-Cz1"/>
+                                <exclude reference="WYi-ya-ZpF"/>
+                                <exclude reference="LpL-yP-HUT"/>
+                                <exclude reference="A9v-gu-btP"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular">
+                            <mask key="subviews">
+                                <include reference="dub-q1-xxq"/>
+                                <include reference="DcU-kD-x1N"/>
+                                <include reference="KyP-GD-1nx"/>
+                                <include reference="m3w-9k-Cz1"/>
+                                <include reference="WYi-ya-ZpF"/>
+                                <include reference="LpL-yP-HUT"/>
+                                <include reference="A9v-gu-btP"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="gKx-PU-ikn">
+                        <barButtonItem key="leftBarButtonItem" title="Chat" id="Icb-mr-96D">
+                            <connections>
+                                <action selector="chatBarButtonItemPressed:" destination="rhc-2c-EBV" id="ziH-Ue-hm2"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Settings" id="NvY-Hx-bWG">
+                            <connections>
+                                <action selector="settingsBarButtonItemPressed:" destination="rhc-2c-EBV" id="IG9-Ss-Pkb"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="ageLabel" destination="LpL-yP-HUT" id="Q7q-Hv-jDs"/>
+                        <outlet property="chatBarButtonItem" destination="Icb-mr-96D" id="Vbu-d5-rpl"/>
+                        <outlet property="dislikeButton" destination="m3w-9k-Cz1" id="EyE-Qk-wlF"/>
+                        <outlet property="firstNameLabel" destination="WYi-ya-ZpF" id="NfT-Z9-cFT"/>
+                        <outlet property="infoButton" destination="KyP-GD-1nx" id="l9F-1W-Yud"/>
+                        <outlet property="likeButton" destination="DcU-kD-x1N" id="ee8-HY-twl"/>
+                        <outlet property="photoImageView" destination="dub-q1-xxq" id="LGy-9V-R35"/>
+                        <outlet property="settingsBarButtonItem" destination="NvY-Hx-bWG" id="7AK-m9-v69"/>
+                        <outlet property="tagLineLabel" destination="A9v-gu-btP" id="A9h-rb-kMR"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="otO-MO-5TA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="elo-vx-JTZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="681" y="7.5"/>
+            <point key="canvasLocation" x="708" y="7.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gdg-xY-B66">

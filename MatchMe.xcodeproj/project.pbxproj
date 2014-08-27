@@ -14,6 +14,7 @@
 		35BBD3F419ABEFE8001D28CB /* MatchMeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 35BBD3F319ABEFE8001D28CB /* MatchMeTests.m */; };
 		35BBD3FF19ABF45D001D28CB /* YILoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35BBD3FE19ABF45D001D28CB /* YILoginViewController.m */; };
 		35BBD40319AC38C5001D28CB /* YIConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 35BBD40219AC38C5001D28CB /* YIConstants.m */; };
+		35BBD40719AD7589001D28CB /* YIHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35BBD40619AD7589001D28CB /* YIHomeViewController.m */; };
 		BD7B60721CAF425AB721F3E6 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 017EBBDD41B0434EB8F23933 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +44,8 @@
 		35BBD3FE19ABF45D001D28CB /* YILoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YILoginViewController.m; sourceTree = "<group>"; };
 		35BBD40119AC38C5001D28CB /* YIConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YIConstants.h; sourceTree = "<group>"; };
 		35BBD40219AC38C5001D28CB /* YIConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YIConstants.m; sourceTree = "<group>"; };
+		35BBD40519AD7589001D28CB /* YIHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YIHomeViewController.h; sourceTree = "<group>"; };
+		35BBD40619AD7589001D28CB /* YIHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YIHomeViewController.m; sourceTree = "<group>"; };
 		8667B984B39C4828957146BD /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -90,6 +93,7 @@
 			children = (
 				35BBD3E419ABEFE7001D28CB /* Main.storyboard */,
 				35BBD40019ABF4D5001D28CB /* Login */,
+				35BBD40419AD7548001D28CB /* Home */,
 				35BBD3DB19ABEFE7001D28CB /* AppDelegate.h */,
 				35BBD3DC19ABEFE7001D28CB /* AppDelegate.m */,
 				35BBD3E719ABEFE7001D28CB /* Images.xcassets */,
@@ -133,6 +137,15 @@
 				35BBD3FE19ABF45D001D28CB /* YILoginViewController.m */,
 			);
 			name = Login;
+			sourceTree = "<group>";
+		};
+		35BBD40419AD7548001D28CB /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				35BBD40519AD7589001D28CB /* YIHomeViewController.h */,
+				35BBD40619AD7589001D28CB /* YIHomeViewController.m */,
+			);
+			name = Home;
 			sourceTree = "<group>";
 		};
 		865BC397750D4355B8E5B386 /* Frameworks */ = {
@@ -280,6 +293,7 @@
 				35BBD40319AC38C5001D28CB /* YIConstants.m in Sources */,
 				35BBD3DD19ABEFE7001D28CB /* AppDelegate.m in Sources */,
 				35BBD3DA19ABEFE7001D28CB /* main.m in Sources */,
+				35BBD40719AD7589001D28CB /* YIHomeViewController.m in Sources */,
 				35BBD3FF19ABF45D001D28CB /* YILoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
