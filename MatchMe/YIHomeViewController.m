@@ -9,6 +9,7 @@
 #import "YIHomeViewController.h"
 #import <Parse/Parse.h>
 #import "YIConstants.h"
+#import "YITestUser.h"
 
 @interface YIHomeViewController ()
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *chatBarButtonItem;
@@ -45,6 +46,7 @@
     self.currentPhotoIndex = 0;
     
     PFQuery *query = [PFQuery queryWithClassName:kYIPhotoClassKey];
+    [query whereKey:kYIPhotoUserKey notEqualTo:[PFUser currentUser]];
     [query includeKey:kYIPhotoUserKey];  // include the actual User object when we retrieve a photo
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
