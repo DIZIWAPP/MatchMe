@@ -11,6 +11,9 @@
 @implementation YIConstants
 
 #pragma mark - User Class
+
+NSString *const kYIUserTagLineKey                       = @"tagLine";
+
 NSString *const kYIUserProfileKey                       = @"profile";
 NSString *const kYIUserProfileNameKey                   = @"name";
 NSString *const kYIUserProfileFirstNameKey              = @"first_name";
@@ -27,7 +30,14 @@ NSString *const kYIPhotoClassKey                        = @"Photo";
 NSString *const kYIPhotoUserKey                         = @"user";
 NSString *const kYIPhotoPictureKey                      = @"image";
 
-
+#pragma mark - Activity Class
+NSString *const kYIActivityClassKey                     = @"Activity";
+NSString *const kYIActivityTypeKey                      = @"type";
+NSString *const kYIActivityFromUserKey                  = @"fromUser";
+NSString *const kYIActivityToUserKey                    = @"toUser";
+NSString *const kYIActivityPhotoKey                     = @"photo";
+NSString *const kYIActivityTypeLikeKey                  = @"like";
+NSString *const kYIActivityTypeDislikeKey               = @"dislike";
 
 
 
