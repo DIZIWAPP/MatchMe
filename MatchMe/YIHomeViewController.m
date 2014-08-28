@@ -24,6 +24,7 @@
 @property (strong, nonatomic) NSArray *photos;  // store all photos we get back from Parse
 @property (nonatomic) int currentPhotoIndex;    // keep track of current photo in the photos array
 
+@property (strong, nonatomic) PFObject *photo;
 
 @end
 
@@ -43,6 +44,8 @@
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
             self.photos = objects;
+            [self queryForCurrentPhotoIndex];
+            
         } else {
             NSLog(@"Error:%@", error);
         }
@@ -82,5 +85,27 @@
 
 - (IBAction)chatBarButtonItemPressed:(UIBarButtonItem *)sender {
 }
+
+#pragma mark - Helper Methods
+- (void)queryForCurrentPhotoIndex {
+    if ([self.photos count] > 0) {
+        self.photo = self.photos[self.currentPhotoIndex];
+        PFFile *file = self.photo[@"image"];
+        [file getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+            if (!error) {
+                UIImage *image = [UIImage imageWithData:data];
+                self.photoImageView.image = image;
+                [self updateView];
+            } else NSLog(@"Failed to download photo:%@", error);
+        }];
+    }
+}
+
+- (void) updateView {
+    self.firstNameLabel.text = self.photo[@"user"][@"profile"][@"first_name"];
+    self.ageLabel.text = [NSString stringWithFormat:@"%@", self.photo[@"user"][@"profile"][@"age"]];  // we use string with format here because age is an int
+    self.tagLineLabel.text = self.photo[@"user"][@"tagLine"];
+}
+
 
 @end
