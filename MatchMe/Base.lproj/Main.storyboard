@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6206.8" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Dsx-Z7-rUg">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7026.1"/>
-        <capability name="Constraints with attributes relative to the layout margin" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Login View Controller-->
@@ -17,11 +16,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="UOc-fY-BCZ">
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="UOc-fY-BCZ">
                                 <rect key="frame" x="90" y="72" width="140" height="20"/>
                             </activityIndicatorView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rsI-Jr-UP0">
-                                <rect key="frame" x="38" y="360" width="244" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rsI-Jr-UP0">
+                                <rect key="frame" x="38" y="384" width="244" height="30"/>
                                 <state key="normal" title="Facebook Login">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -31,14 +30,6 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="rsI-Jr-UP0" firstAttribute="centerX" secondItem="D0U-sO-0JX" secondAttribute="centerX" id="3wM-oP-nog"/>
-                            <constraint firstItem="rsI-Jr-UP0" firstAttribute="centerX" secondItem="UOc-fY-BCZ" secondAttribute="centerX" id="9fW-f9-C18"/>
-                            <constraint firstItem="rsI-Jr-UP0" firstAttribute="leading" secondItem="aK1-kV-ora" secondAttribute="leadingMargin" constant="22" id="LYx-bC-MKu"/>
-                            <constraint firstItem="D0U-sO-0JX" firstAttribute="top" secondItem="rsI-Jr-UP0" secondAttribute="bottom" constant="178" id="dHD-42-Bet"/>
-                            <constraint firstItem="UOc-fY-BCZ" firstAttribute="top" secondItem="ZdS-Tz-7ql" secondAttribute="bottom" constant="8" symbolic="YES" id="fyN-Ka-Z4y"/>
-                            <constraint firstItem="UOc-fY-BCZ" firstAttribute="leading" secondItem="aK1-kV-ora" secondAttribute="leadingMargin" constant="74" id="xvu-D8-IyA"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="sXy-F3-m8B"/>
                     <connections>
@@ -343,16 +334,16 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Oe-4y-Czj">
-                                <rect key="frame" x="60" y="293" width="280" height="280"/>
-                            </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dKq-JM-LaD">
-                                <rect key="frame" x="16" y="101" width="368" height="106"/>
+                                <rect key="frame" x="16" y="101" width="288" height="106"/>
                                 <color key="backgroundColor" red="0.81039005474452552" green="0.79037408759124084" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Oe-4y-Czj">
+                                <rect key="frame" x="20" y="268" width="280" height="280"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -371,7 +362,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LUz-ZC-BcB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1128.8" y="-440.19999999999999"/>
+            <point key="canvasLocation" x="1128" y="-441"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gdg-xY-B66">
