@@ -7,7 +7,11 @@
 //
 
 #import "JSMessagesViewController.h"
+#import "YIConstants.h"
+#import <Parse/Parse.h>
 
-@interface YIChatViewController : JSMessagesViewController
+@interface YIChatViewController : JSMessagesViewController <JSMessagesViewDataSource, JSMessagesViewDelegate>
+
+@property (strong, nonatomic) PFObject *chatRoom;  //passed in via segue from matches view controller
 
 @end
