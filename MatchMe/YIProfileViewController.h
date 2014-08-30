@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "YIConstants.h"
+#import <Parse/Parse.h>
 
 @interface YIProfileViewController : UIViewController
+
+@property (strong, nonatomic) PFObject *photo;
 
 @end
