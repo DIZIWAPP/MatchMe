@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface YIHomeViewController : UIViewController
+@interface YIHomeViewController : UIViewController 
 
 @end

@@ -7,6 +7,8 @@
 //
 
 #import "YIMatchViewController.h"
+#import <Parse/Parse.h>
+#import "YIConstants.h"
 
 @interface YIMatchViewController ()
 
@@ -21,7 +23,20 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    PFQuery *query = [PFQuery queryWithClassName:kYIPhotoClassKey]; // get back our photo so we can display side by side with self.matchedUserImage
+    [query whereKey:kYIPhotoUserKey equalTo:[PFUser currentUser]];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if ([objects count] > 0) {
+            PFObject *photo = objects[0];
+            PFFile *pictureFile = photo[kYIPhotoPictureKey];
+            [pictureFile getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+                self.currentUserImageView.image = [UIImage imageWithData:data];
+                self.matchedUserImageView.image = self.matchedUserImage;  // this is passed in from HomeVC
+            }];
+        }
+    }];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -41,12 +56,13 @@
 
 #pragma mark - IBActions
 
+// When user press this button it should show all the chats, because this is a model transition, we need to use delegate
 - (IBAction)viewChatsButtonPressed:(UIButton *)sender {
-
+    [self.delegate presentMatchesViewController];
 }
 
 - (IBAction)keepSearchingButtonPressed:(UIButton *)sender {
-    
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 

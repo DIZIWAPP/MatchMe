@@ -11,8 +11,10 @@
 #import "YIConstants.h"
 #import "YITestUser.h"
 #import "YIProfileViewController.h"
+#import "YIMatchViewController.h"
 
-@interface YIHomeViewController ()
+@interface YIHomeViewController () <YIMatchViewControllerDelegate>
+
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *chatBarButtonItem;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *settingsBarButtonItem;
 @property (strong, nonatomic) IBOutlet UIImageView *photoImageView;
@@ -74,6 +76,10 @@
     if ([segue.identifier isEqualToString:@"homeToProfileSegue"]) {
         YIProfileViewController *profileVC = segue.destinationViewController;
         profileVC.photo = self.photo;
+    } else if ([segue.identifier isEqualToString:@"homeToMatchSegue"]) {
+        YIMatchViewController *matchVC = segue.destinationViewController;
+        matchVC.matchedUserImage = self.photoImageView.image;
+        matchVC.delegate = self;
     }
     
 }
@@ -178,7 +184,7 @@
         self.isLikedByCurrentUser = YES;
         self.isDislikedByCurrentUser = NO;
         [self.activities addObject:likeActivity];
-        [self checkForPhotoUserLikes];  //create chatroom if there is mutual like
+        [self checkForPhotoUserLikes];  // possibly create chatroom if there is mutual like
         [self setupNextPhoto];
     }];
 }
@@ -273,5 +279,14 @@
     
     
 }
+
+#pragma mark - YIMatchViewControllerDelegate
+- (void)presentMatchesViewController {
+    [self dismissViewControllerAnimated:NO completion:^{
+       // make sure this vc is dismissed before we transition to new view controller, so we do it in the comp block
+        [self performSegueWithIdentifier:@"homeToMatchesSegue" sender:nil];
+    }];
+}
+
 
 @end
