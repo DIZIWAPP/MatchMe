@@ -20,6 +20,8 @@
 		35BBD41419AD8D3B001D28CB /* YIProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35BBD41319AD8D3B001D28CB /* YIProfileViewController.m */; };
 		35BBD41819AEDB45001D28CB /* YITestUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 35BBD41719AEDB45001D28CB /* YITestUser.m */; };
 		35BBD41C19AEDC95001D28CB /* ProfileImage1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 35BBD41B19AEDC95001D28CB /* ProfileImage1.jpg */; };
+		35BBD42019B16E1E001D28CB /* YIMatchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35BBD41F19B16E1E001D28CB /* YIMatchViewController.m */; };
+		35BBD42419B170B2001D28CB /* YIMatchesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35BBD42319B170B2001D28CB /* YIMatchesViewController.m */; };
 		BD7B60721CAF425AB721F3E6 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 017EBBDD41B0434EB8F23933 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +62,10 @@
 		35BBD41619AEDB45001D28CB /* YITestUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YITestUser.h; sourceTree = "<group>"; };
 		35BBD41719AEDB45001D28CB /* YITestUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YITestUser.m; sourceTree = "<group>"; };
 		35BBD41B19AEDC95001D28CB /* ProfileImage1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ProfileImage1.jpg; sourceTree = "<group>"; };
+		35BBD41E19B16E1E001D28CB /* YIMatchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YIMatchViewController.h; sourceTree = "<group>"; };
+		35BBD41F19B16E1E001D28CB /* YIMatchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YIMatchViewController.m; sourceTree = "<group>"; };
+		35BBD42219B170B2001D28CB /* YIMatchesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YIMatchesViewController.h; sourceTree = "<group>"; };
+		35BBD42319B170B2001D28CB /* YIMatchesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YIMatchesViewController.m; sourceTree = "<group>"; };
 		8667B984B39C4828957146BD /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -112,6 +118,9 @@
 				35BBD40D19AD89C4001D28CB /* Edit Profile */,
 				35BBD41119AD8D1D001D28CB /* Profile */,
 				35BBD41519AED8C9001D28CB /* Create Parse User */,
+				35BBD41D19B16DD0001D28CB /* Match */,
+				35BBD42119B17091001D28CB /* Matches */,
+				35BBD42519B17164001D28CB /* Chat */,
 				35BBD3DB19ABEFE7001D28CB /* AppDelegate.h */,
 				35BBD3DC19ABEFE7001D28CB /* AppDelegate.m */,
 				35BBD3E719ABEFE7001D28CB /* Images.xcassets */,
@@ -217,6 +226,31 @@
 				35BBD41B19AEDC95001D28CB /* ProfileImage1.jpg */,
 			);
 			name = Images;
+			sourceTree = "<group>";
+		};
+		35BBD41D19B16DD0001D28CB /* Match */ = {
+			isa = PBXGroup;
+			children = (
+				35BBD41E19B16E1E001D28CB /* YIMatchViewController.h */,
+				35BBD41F19B16E1E001D28CB /* YIMatchViewController.m */,
+			);
+			name = Match;
+			sourceTree = "<group>";
+		};
+		35BBD42119B17091001D28CB /* Matches */ = {
+			isa = PBXGroup;
+			children = (
+				35BBD42219B170B2001D28CB /* YIMatchesViewController.h */,
+				35BBD42319B170B2001D28CB /* YIMatchesViewController.m */,
+			);
+			name = Matches;
+			sourceTree = "<group>";
+		};
+		35BBD42519B17164001D28CB /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Chat;
 			sourceTree = "<group>";
 		};
 		865BC397750D4355B8E5B386 /* Frameworks */ = {
@@ -363,6 +397,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				35BBD41019AD89F7001D28CB /* YIEditProfileViewController.m in Sources */,
+				35BBD42419B170B2001D28CB /* YIMatchesViewController.m in Sources */,
 				35BBD40319AC38C5001D28CB /* YIConstants.m in Sources */,
 				35BBD3DD19ABEFE7001D28CB /* AppDelegate.m in Sources */,
 				35BBD3DA19ABEFE7001D28CB /* main.m in Sources */,
@@ -370,6 +405,7 @@
 				35BBD40719AD7589001D28CB /* YIHomeViewController.m in Sources */,
 				35BBD41419AD8D3B001D28CB /* YIProfileViewController.m in Sources */,
 				35BBD3FF19ABF45D001D28CB /* YILoginViewController.m in Sources */,
+				35BBD42019B16E1E001D28CB /* YIMatchViewController.m in Sources */,
 				35BBD41819AEDB45001D28CB /* YITestUser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
