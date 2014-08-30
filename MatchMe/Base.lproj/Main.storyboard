@@ -238,16 +238,17 @@
                     <navigationItem key="navigationItem" id="xey-MN-mOP"/>
                     <connections>
                         <outlet property="tableView" destination="eTa-T2-obK" id="BqK-rl-zIX"/>
+                        <segue destination="hOu-Ws-Gm6" kind="push" identifier="matchesToChatSegue" id="5Qr-jv-6hu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M1N-gk-YQg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="617" y="1169"/>
         </scene>
-        <!--View Controller-->
+        <!--Chat View Controller-->
         <scene sceneID="ZMd-vE-P7I">
             <objects>
-                <viewController id="hOu-Ws-Gm6" sceneMemberID="viewController">
+                <viewController id="hOu-Ws-Gm6" customClass="YIChatViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dV9-Qh-y59"/>
                         <viewControllerLayoutGuide type="bottom" id="GDd-3a-Anp"/>
@@ -257,6 +258,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="9hy-jK-Wdo"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jW4-rA-McH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

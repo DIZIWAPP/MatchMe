@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		35AF3C6D19B17423000C4D29 /* YIChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35AF3C6C19B17423000C4D29 /* YIChatViewController.m */; };
 		35BBD3DA19ABEFE7001D28CB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 35BBD3D919ABEFE7001D28CB /* main.m */; };
 		35BBD3DD19ABEFE7001D28CB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 35BBD3DC19ABEFE7001D28CB /* AppDelegate.m */; };
 		35BBD3E619ABEFE7001D28CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35BBD3E419ABEFE7001D28CB /* Main.storyboard */; };
@@ -37,6 +38,8 @@
 
 /* Begin PBXFileReference section */
 		017EBBDD41B0434EB8F23933 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		35AF3C6B19B17423000C4D29 /* YIChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YIChatViewController.h; sourceTree = "<group>"; };
+		35AF3C6C19B17423000C4D29 /* YIChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YIChatViewController.m; sourceTree = "<group>"; };
 		35BBD3D419ABEFE7001D28CB /* MatchMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MatchMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35BBD3D819ABEFE7001D28CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		35BBD3D919ABEFE7001D28CB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -249,6 +252,8 @@
 		35BBD42519B17164001D28CB /* Chat */ = {
 			isa = PBXGroup;
 			children = (
+				35AF3C6B19B17423000C4D29 /* YIChatViewController.h */,
+				35AF3C6C19B17423000C4D29 /* YIChatViewController.m */,
 			);
 			name = Chat;
 			sourceTree = "<group>";
@@ -406,6 +411,7 @@
 				35BBD41419AD8D3B001D28CB /* YIProfileViewController.m in Sources */,
 				35BBD3FF19ABF45D001D28CB /* YILoginViewController.m in Sources */,
 				35BBD42019B16E1E001D28CB /* YIMatchViewController.m in Sources */,
+				35AF3C6D19B17423000C4D29 /* YIChatViewController.m in Sources */,
 				35BBD41819AEDB45001D28CB /* YITestUser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

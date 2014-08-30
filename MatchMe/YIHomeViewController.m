@@ -178,6 +178,7 @@
         self.isLikedByCurrentUser = YES;
         self.isDislikedByCurrentUser = NO;
         [self.activities addObject:likeActivity];
+        [self checkForPhotoUserLikes];  //create chatroom if there is mutual like
         [self setupNextPhoto];
     }];
 }
@@ -230,6 +231,47 @@
     }
 }
 
+- (void)checkForPhotoUserLikes {
+    PFQuery *query = [PFQuery queryWithClassName:kYIActivityClassKey];
+    // this user we are viewing as in fact liked me
+    [query whereKey:kYIActivityFromUserKey equalTo:self.photo[kYIPhotoUserKey]];
+    [query whereKey:kYIActivityToUserKey equalTo:[PFUser currentUser]];
+    [query whereKey:kYIActivityTypeKey equalTo:kYIActivityTypeLikeKey];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if ([objects count] > 0) {
+            // create our chat room
+            [self createChatRoom];
+        }
+    }];
+}
 
+- (void)createChatRoom {
+    
+    // current user could be user 1 or user 2 so we have to check both scenarios
+    PFQuery *queryForChatRoom = [PFQuery queryWithClassName:@"ChatRoom"];
+    [queryForChatRoom whereKey:@"user1" equalTo:[PFUser currentUser]];
+    [queryForChatRoom whereKey:@"user2" equalTo:self.photo[kYIPhotoUserKey]];
+    
+    PFQuery *queryForChatRoomInverse = [PFQuery queryWithClassName:@"ChatRoom"];
+    [queryForChatRoomInverse whereKey:@"user1" equalTo:self.photo[kYIPhotoUserKey]];
+    [queryForChatRoomInverse whereKey:@"user2" equalTo:[PFUser currentUser]];
+    
+    // combine the 2 queries
+    PFQuery *combinedQuery = [PFQuery orQueryWithSubqueries:@[queryForChatRoom, queryForChatRoomInverse]];
+    [combinedQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if ([objects count] == 0) {
+            // there is no existing chatroom, so start a new one
+            PFObject *chatRoom = [ PFObject objectWithClassName:@"ChatRoom"];
+            [chatRoom setObject:[PFUser currentUser] forKey:@"user1"];
+            [chatRoom setObject:self.photo[kYIPhotoUserKey] forKey:@"user2"];
+            [chatRoom saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+                [self performSegueWithIdentifier:@"homeToMatchSegue" sender:nil];
+            }];
+            
+        }
+    }];
+    
+    
+}
 
 @end
