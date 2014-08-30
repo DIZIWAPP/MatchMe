@@ -25,10 +25,12 @@ NSString *const kYIUserProfilePictureURL                = @"pictureURL";
 NSString *const kYIUserProfileRelationshipStatusKey     = @"relationshipStatus";
 NSString *const kYIUserProfileAgeKey                    = @"age";
 
+
 #pragma mark - Photo Class
 NSString *const kYIPhotoClassKey                        = @"Photo";
 NSString *const kYIPhotoUserKey                         = @"user";
 NSString *const kYIPhotoPictureKey                      = @"image";
+
 
 #pragma mark - Activity Class
 NSString *const kYIActivityClassKey                     = @"Activity";
@@ -38,6 +40,15 @@ NSString *const kYIActivityToUserKey                    = @"toUser";
 NSString *const kYIActivityPhotoKey                     = @"photo";
 NSString *const kYIActivityTypeLikeKey                  = @"like";
 NSString *const kYIActivityTypeDislikeKey               = @"dislike";
+
+
+#pragma mark - Settings
+NSString *const kYIMenEnabledKey                        = @"men";
+NSString *const kYIWomenEnabledKey                      = @"women";
+NSString *const kYISingleEnabledKey                     = @"single";
+NSString *const kYIAgeMaxKey                            = @"ageMax";
+
+
 
 
 

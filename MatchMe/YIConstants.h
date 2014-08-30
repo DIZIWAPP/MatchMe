@@ -31,6 +31,7 @@ extern NSString *const kYIPhotoClassKey;
 extern NSString *const kYIPhotoUserKey;
 extern NSString *const kYIPhotoPictureKey;
 
+
 #pragma mark - Activity Class
 extern NSString *const kYIActivityClassKey;
 extern NSString *const kYIActivityTypeKey;
@@ -39,5 +40,15 @@ extern NSString *const kYIActivityToUserKey;
 extern NSString *const kYIActivityPhotoKey;
 extern NSString *const kYIActivityTypeLikeKey;
 extern NSString *const kYIActivityTypeDislikeKey;
+
+
+#pragma mark - Settings
+extern NSString *const kYIMenEnabledKey;
+extern NSString *const kYIWomenEnabledKey;
+extern NSString *const kYISingleEnabledKey;
+extern NSString *const kYIAgeMaxKey;
+
+
+
 
 @end
